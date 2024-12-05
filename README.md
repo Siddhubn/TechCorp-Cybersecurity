@@ -26,13 +26,19 @@ The website includes a simulated **Employee Portal** for practicing various secu
 ---
 
 ## File Structure
-TechCorp/ │ 
+TechCorp/ 
 ├── index.html # Main HTML file |
+
 ├── style/ │ ├── styles.css # Custom CSS styles │ 
+
 ├── imgs/ # Images used in the website 
+
 │  ├── logo.png # TechCorp logo │ 
+
 |  ├── office.jpeg # Office background image │ 
+
 ├── phishing.php # Simulated phishing endpoint (used for demonstration) |
+
 ├── README.md # Project description (this file) |
 
 ---
