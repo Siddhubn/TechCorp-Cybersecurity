@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgb(255,255,255), rgb(0 15 97));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Dark blue */
+    color: rgb(1, 21, 151);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 100vh;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: rgb(0, 44, 140);
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    font-family: orbitron;
+}
+
+nav a:hover {
+    color: #008cff; /* Gold color on hover */
+    transform: scale(1.1);
+}
+
+.content-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    transition: all 0.5s ease-in-out;
+}
+
+h1, h2 {
+    color: #003366; /* Dark blue */
+    animation: fadeIn 1s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #003366; /* Dark blue */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #005599; /* Lighter blue on hover */
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(0 15 97);
+    color: white;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    nav ul.open {
+        max-height: 100vh; /* Allow the nav to open fully on mobile */
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .content-section {
+        max-width: 90%;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

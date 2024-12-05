@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCorp</title>
+    <link rel="stylesheet" href="style/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Hide all sections
+            });
+            document.getElementById(sectionId).style.display = 'block'; // Show selected section
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo" style="width: auto;">
+            <img src="imgs/logo.png" alt="TechCorp Logo" width="120px" height="85px" style="margin-left: 20px;">
+        </div>
+        <p style="font-family:Rajdhani; float:left; font-size:40px; animation: fadeIn 2s;"><b>T e c h C o r p</b></p>
+        <nav>
+            <ul style="font-size:20px; text-align:center;">
+                <li><a href="javascript:void(0);" onclick="showSection('home')">Home</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('services')">Services</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('about')">About Us</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('contact')">Contact Us</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('login')">Employee Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="content-section">
+            <h1 style="font-family:audiowide;">Welcome to TechCorp</h1>
+            <p>Your trusted partner in technology solutions.</p>
+            <img src="imgs/office.jpeg" alt="TechCorp Office" width="100%" height="30%"> <!-- Add an image of a tech office -->
+        </section>
+
+        <section id="services" class="content-section" style="display:none;">
+            <h2 style="font-family: Audiowide;">Our Services</h2>
+            <ul style="font-family: Rajdhani;">
+                <li>Cloud Solutions</li>
+                <br>
+                <li>IT Security</li>
+                <br>
+                <li>Software Development</li>
+            </ul>
+        </section>
+
+        <section id="about" class="content-section" style="display:none;">
+            <h2 style="font-family: Audiowide;">About Us</h2>
+            <p style="font-family: Rajdhani;">TechCorp is a leading technology solutions provider committed to delivering top-notch services.</p>
+            
+            <h3 style="font-family: Audiowide;">Branch Manager Details</h3>
+            <ul style="font-family: Rajdhani;">
+                <li><strong>Name:</strong> "A" </li>
+                <li><strong>Position:</strong> Branch Manager</li>
+                <li><strong>Email:</strong> letshackit@cybersec.edu</li>
+                <li><strong>Phone:</strong> +91 1234567890</li>
+                <li><strong>Department:</strong> Sales</li>
+                <li><strong>Location:</strong> Muniyammana Jopdi </li>
+            </ul>
+            <p style="font-family: Rajdhani;">Details related to Branch Manager "A" will be used for ethical hacking tool trials.</p>
+        </section>
+
+        <section id="login" class="content-section" style="display:none;">
+            <h2 style="font-family: Audiowide;">Employee Portal</h2>
+            <form action="phishing.php" method="POST" style="font-family: Rajdhani;"> <!-- Link to phishing demo -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="contact" class="content-section" style="display:none; font-family:Rajdhani;">
+            <h2 style="font-family: Audiowide;">Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+            <p>Office Address: Muniyammana Jopdi</p>
+            <p>Email: cybersecise@atria.edu </p>
+        </section>
+
+        <section id="sensitive-data" class="content-section" style="display:none;">
+            <h2>Confidential Information</h2>
+            <p>Details related to Branch Manager "A" and other sensitive company data.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ISE. All rights reserved.</p>
+    </footer>
+</body>
+</html>
